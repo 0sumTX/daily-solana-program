@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Env / secrets
+.env
+.env.*
+*.local
+
+# Anchor / Rust / Solana build artifacts
+**/target/
+**/.anchor/
+**/test-ledger/
+**/.DS_Store
+
+# JS dependencies created by Anchor workspaces
+**/node_modules/
+
+# Optional frontend/build outputs if you ever use app/
+**/dist/
+**/build/
+**/.next/
+**/coverage/
+
+# Temp logs
+**/*.log
