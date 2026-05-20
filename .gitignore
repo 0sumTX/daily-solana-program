@@ -27,3 +27,6 @@
 
 # Temp logs
 **/*.log
+
+# Local notes
+**/foo*
