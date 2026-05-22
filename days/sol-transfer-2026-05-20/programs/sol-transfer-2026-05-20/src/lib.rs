@@ -16,14 +16,15 @@ pub mod sol_transfer_2026_05_20 {
         // create transfer ix based on the system program
         let transfer_instruction = system_instruction::transfer(from_account.key, to_account.key, amount);
         
+        // CPI - calling the system program
         anchor_lang::solana_program::program::invoke_signed(
             &transfer_instruction,
-            &[
+            &[                                  // account array provides the actual accounts to the SysProg
                 from_account.to_account_info(),
                 to_account.to_account_info(),
                 ctx.accounts.system_program.to_account_info(),
             ],
-            &[],
+            &[], // '&[]' = NO PDA Signer seeds are being used 
         )?;
         
         Ok(())
