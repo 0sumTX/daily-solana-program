@@ -18,7 +18,7 @@ use solana_pubkey::Pubkey;
 
 #[test]
 fn test_initialize() {
-    let program_id = "7wEySZY5UT1HNqEFHGve83ufgKsaFhjbVv5yshnYq91b";
+    let program_id = counter_2026_05_19::ID;
     let anchor_wallet = std::env::var("ANCHOR_WALLET").unwrap();
     let payer = read_keypair_file(&anchor_wallet).unwrap();
 
